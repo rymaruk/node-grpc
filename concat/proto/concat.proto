@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package concat;
+
+message ConcatRequest {
+  string first_phrase = 1;
+  string second_phrase = 2;
+}
+
+message ConcatResponse {
+  string result = 1;
+}
+
+service ConcatService {
+  rpc Concat(ConcatRequest) returns (ConcatResponse);
+  rpc ConcatManyTimes(ConcatRequest) returns (stream ConcatResponse);
+  rpc ConcatLong(stream ConcatRequest) returns (ConcatResponse);
+}

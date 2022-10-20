@@ -1,0 +1,25 @@
+{
+  "name": "app-grpcs-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.7.2",
+    "@grpc/proto-loader": "^0.7.3",
+    "@types/lodash": "^4.14.186",
+    "google-protobuf": "^3.21.2",
+    "grpc": "^1.24.11",
+    "lodash": "^4.17.21",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "pb:gen": "./scripts/gen.sh greet concat",
+    "greet:server": "node greet/server/index.js",
+    "greet:client": "node greet/client/index.js",
+    "concat:server": "node concat/server/index.js",
+    "concat:client": "node concat/client/index.js"
+  },
+  "devDependencies": {
+    "grpc-tools": "^1.11.3"
+  }
+}
