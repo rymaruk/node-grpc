@@ -52,7 +52,7 @@ function doConcatManyTimes() {
 }
 
 function doConcatLong() {
-    const phrases = ['Hello', 'world!', 'You', 'are', 'looks', 'good'];
+    const phrases = ['Hello', 'world!', 'You', '', 'look', 'good', '!'];
 
     const call = client.concatLong((err, res) => {
         if (err) return console.log(err);
